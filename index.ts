@@ -1,6 +1,6 @@
 console.log("你好ts");
 
-function getData(){
+function gasdasda(){
 
 }
 
