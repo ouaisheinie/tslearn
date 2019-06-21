@@ -1,6 +1,6 @@
 "use strict";
 console.log("你好ts");
-function getData() {
+function gasdasda() {
 }
 var str = "你好ts";
 /*
