@@ -27,19 +27,6 @@ Person.haha = "123"//静态属性
 //   }
 // }
 // const p1 = new Persons("张泽悠");
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 // Persons.dance();//静态方法直接这样调用
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
 /* 多态   多态属于继承*/
@@ -76,38 +63,33 @@ var __extends = (this && this.__extends) || (function () {
 //抽象类和抽象方法用来定义标准
 //抽象类  要求他的子类必须包含什么方法  
 //抽象方法 只能出现在抽象类里面
-var Animal = /** @class */ (function () {
-    function Animal(name) {
+class Animal {
+    constructor(name) {
         this.name = name;
     }
-    return Animal;
-}());
+}
 //抽象类的子类必须实现抽象类里面的抽象方法
-var Dog = /** @class */ (function (_super) {
-    __extends(Dog, _super);
-    function Dog(name) {
-        return _super.call(this, name) || this;
+class Dog extends Animal {
+    constructor(name) {
+        super(name);
     }
-    Dog.prototype.eat = function () {
+    eat() {
         console.log(this.name + "吃肉。");
-    };
-    return Dog;
-}(Animal));
-var d = new Dog("小黑");
-d.eat();
-var Cat = /** @class */ (function (_super) {
-    __extends(Cat, _super);
-    function Cat(name) {
-        return _super.call(this, name) || this;
     }
-    Cat.prototype.eat = function () {
+}
+const d = new Dog("小黑");
+d.eat();
+class Cat extends Animal {
+    constructor(name) {
+        super(name);
+    }
+    eat() {
         console.log(this.name + "吃老鼠。");
-    };
-    Cat.prototype.run = function () {
+    }
+    run() {
         console.log(this.name + "在跑步");
-    };
-    return Cat;
-}(Animal));
-var c = new Cat("小花");
+    }
+}
+const c = new Cat("小花");
 c.eat();
 c.run();

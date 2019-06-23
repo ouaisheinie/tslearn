@@ -11,6 +11,6 @@
 */
 Object.defineProperty(exports, "__esModule", { value: true });
 //as关键词用法
-var db_1 = require("./module/db");
+const db_1 = require("./module/db");
 console.log(db_1.getData());
 console.log(db_1.dburl);
