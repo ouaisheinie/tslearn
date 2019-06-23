@@ -32,7 +32,7 @@ console.log(str);
 var arr = [11, "sss", { obj: 1 }];
 console.log(arr);
 // 元组类型 tuple  就是有很多种类型的元素的数组 给数组中每个位置指定类型
-var tup = [11, "zzy"];
+let tup = [11, "zzy"];
 console.log(tup);
 // 枚举类型 enum
 var meiju;
@@ -40,7 +40,7 @@ var meiju;
     meiju[meiju["success"] = 1] = "success";
     meiju[meiju["error"] = 2] = "error";
 })(meiju || (meiju = {}));
-var mes = meiju.success;
+let mes = meiju.success;
 console.log(mes); //打印出来是1
 console.log(meiju[mes]); //打印出来是success
 var Color;
@@ -49,10 +49,10 @@ var Color;
     Color[Color["red"] = 3] = "red";
     Color[Color["orange"] = 4] = "orange";
 })(Color || (Color = {}));
-var co = Color.red;
+let co = Color.red;
 console.log(co);
 // 任意类型 any
-var anyType = 444;
+let anyType = 444;
 console.log(anyType);
 // null和undefined类型  属于never类型的子类型
 /* var n1:number;
@@ -73,6 +73,6 @@ function run2() {
 // var b1 :null;
 // b = null
 var a;
-a = (function () {
+a = (() => {
     throw new Error("错误");
 })();
