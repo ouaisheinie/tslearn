@@ -120,5 +120,5 @@ class httpClient{
   }
 }
 
-var http1 = new httpClient();
-http1.getData();
+var http = new httpClient();
+http.getData();
