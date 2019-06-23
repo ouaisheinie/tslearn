@@ -1,3 +1,4 @@
 {
-  "liveServer.settings.multiRootWorkspaceName": "tslearn"
+  "liveServer.settings.multiRootWorkspaceName": "tslearn",
+  "javascript.implicitProjectConfig.experimentalDecorators": true
 }
