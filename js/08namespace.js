@@ -13,25 +13,23 @@ Object.defineProperty(exports, "__esModule", { value: true });
 //暴露之后再外部文件可以引用
 var A;
 (function (A) {
-    var Dog = /** @class */ (function () {
-        function Dog(theName) {
+    class Dog {
+        constructor(theName) {
             this.name = theName;
         }
-        Dog.prototype.eat = function () {
-            console.log(this.name + "\u5403\u72D7\u7CAE.");
-        };
-        return Dog;
-    }());
+        eat() {
+            console.log(`${this.name}吃狗粮.`);
+        }
+    }
     A.Dog = Dog;
-    var Cat = /** @class */ (function () {
-        function Cat(theName) {
+    class Cat {
+        constructor(theName) {
             this.name = theName;
         }
-        Cat.prototype.eat = function () {
-            console.log(this.name + "\u5403\u8001\u9F20.");
-        };
-        return Cat;
-    }());
+        eat() {
+            console.log(`${this.name}吃老鼠.`);
+        }
+    }
     A.Cat = Cat;
 })(A || (A = {}));
 //调用命名空间内A的
@@ -40,15 +38,14 @@ dog.eat();
 //暴露之后再外部文件可以引用
 var B;
 (function (B) {
-    var Dog = /** @class */ (function () {
-        function Dog(theName) {
+    class Dog {
+        constructor(theName) {
             this.name = theName;
         }
-        Dog.prototype.eat = function () {
-            console.log(this.name + "\u54AC\u4EBA.");
-        };
-        return Dog;
-    }());
+        eat() {
+            console.log(`${this.name}咬人.`);
+        }
+    }
     B.Dog = Dog;
 })(B = exports.B || (exports.B = {}));
 //调用命名空间B内的

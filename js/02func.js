@@ -85,6 +85,6 @@ console.log(fun2());
 // console.log(getInfo("张泽悠",27));
 /* 箭头函数 */
 //箭头函数里面的this指向上下文
-setTimeout(function () {
+setTimeout(() => {
     alert("run");
 }, 1000);

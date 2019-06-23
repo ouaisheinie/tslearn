@@ -1,19 +1,17 @@
 "use strict";
 //定义一个操作mysql数据库的类
-var MysqlDb = /** @class */ (function () {
-    function MysqlDb() {
-    }
-    MysqlDb.prototype.add = function (info) {
+class MysqlDb {
+    add(info) {
         console.log(info);
         return true;
-    };
-    MysqlDb.prototype.update = function (info, id) {
+    }
+    update(info, id) {
         throw new Error("Method not implemented.");
-    };
-    MysqlDb.prototype.delete = function (id) {
+    }
+    delete(id) {
         throw new Error("Method not implemented.");
-    };
-    MysqlDb.prototype.get = function (id) {
+    }
+    get(id) {
         var list = [
             {
                 title: "哈哈哈",
@@ -21,24 +19,23 @@ var MysqlDb = /** @class */ (function () {
             }
         ];
         return list;
-    };
-    return MysqlDb;
-}());
-var MssqlDB = /** @class */ (function () {
-    function MssqlDB() {
+    }
+}
+class MssqlDB {
+    constructor() {
         console.log("数据库建立连接");
     }
-    MssqlDB.prototype.add = function (info) {
+    add(info) {
         console.log(info);
         return true;
-    };
-    MssqlDB.prototype.update = function (info, id) {
+    }
+    update(info, id) {
         throw new Error("Method not implemented.");
-    };
-    MssqlDB.prototype.delete = function (id) {
+    }
+    delete(id) {
         throw new Error("Method not implemented.");
-    };
-    MssqlDB.prototype.get = function (id) {
+    }
+    get(id) {
         var list = [
             {
                 title: "哈哈哈",
@@ -46,15 +43,11 @@ var MssqlDB = /** @class */ (function () {
             }
         ];
         return list;
-    };
-    return MssqlDB;
-}());
-// 操作用户表 定义一个User类和数据表做映射
-var User = /** @class */ (function () {
-    function User() {
     }
-    return User;
-}());
+}
+// 操作用户表 定义一个User类和数据表做映射
+class User {
+}
 var u = new User();
 u.username = "张三";
 u.password = "123456";

@@ -27,20 +27,17 @@
 // //把类的实例ar传进去
 // db.add(ar);
 /* 下面用泛型来改写 MySqlDB*/
-var MySqlDB = /** @class */ (function () {
-    function MySqlDB() {
-    }
-    MySqlDB.prototype.add = function (info) {
+class MySqlDB {
+    add(info) {
         console.log(info);
         return true;
-    };
-    MySqlDB.prototype.update = function (info, id) {
+    }
+    update(info, id) {
         console.log(info);
         console.log(id);
         return true;
-    };
-    return MySqlDB;
-}());
+    }
+}
 //给user表增加数据
 // 先定义一个user类  然后和数据库进行映射
 /* class User{
@@ -57,14 +54,13 @@ DB.add(u); */
 // DB.add("123445");//错误写法
 //给ArticleCate表增加数据
 //先定义一个ArticleCate类 然后和数据库进行映射
-var ArticleCate = /** @class */ (function () {
-    function ArticleCate(params) {
+class ArticleCate {
+    constructor(params) {
         this.title = params.title;
         this.desc = params.desc;
         this.status = params.status;
     }
-    return ArticleCate;
-}());
+}
 //增加操作
 // var ar = new ArticleCate({
 //   title:"分类",
