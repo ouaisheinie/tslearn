@@ -8,7 +8,7 @@
 
 /* 类装饰器 */
 //1.类装饰器在类声明之前被声明（紧靠类声明）。类装饰器应用于类构造函数，可以用来监视，修改或替换类定义。传入一个参数,代表当前类.
-//z装饰器可以在不修改类的前提下来扩展类的功能
+//装饰器可以在不修改类的前提下来扩展类的功能
 //普通装饰器
 /* function logClass(params:any){
   //params就是当前类
@@ -99,7 +99,8 @@ function logClass(params:any){
   }
 }
 //属性装饰器
-function logProperty(targer:any){
+function logProperty(params:any){
+  console.log(params);
   return function(target:any,attr:any){
     //target对静态成员来说是类的构造函数，对于实例成员是类的原型对象
     console.log(target);
