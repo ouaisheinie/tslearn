@@ -85,4 +85,5 @@ var ar = new ArticleCate({
 });
 ar.status = 0;
 var DB3 = new MySqlDB<ArticleCate>();
+// 传入的是一个ArticleCate实例
 DB3.update(ar,12);
