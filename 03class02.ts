@@ -75,8 +75,8 @@ private: 私有 在类里面可以访问；子类和类外面都没法访问；
 */
 class Person{
   public name:string;//公有属性
-  protected sex:string = "男";//公有属性
-  private height:string = "181";//公有属性
+  protected sex:string = "男";//保护属性
+  private height:string = "181";//私有属性
   constructor(name:string) {
     this.name = name;
   }

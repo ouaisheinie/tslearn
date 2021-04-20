@@ -49,7 +49,7 @@ var Color;
     Color[Color["red"] = 3] = "red";
     Color[Color["orange"] = 4] = "orange";
 })(Color || (Color = {}));
-let co = Color.red;
+let co = Color.blue;
 console.log(co);
 // 任意类型 any
 let anyType = 444;

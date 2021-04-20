@@ -58,6 +58,12 @@
 // }
 // alert(sum(1,2,3,4));
 
+/*
+function sum(a: number, ...restCode: number[]) {
+  console.log(restCode)
+}
+*/
+
 //三点运算符接收形参
 // function sum(...result:number[]):number{
 //   var sum = 0;

@@ -80,8 +80,8 @@ class ArticleCate{
 // var DB2 = new MySqlDB<ArticleCate>();
 // DB2.add(ar);
 var ar = new ArticleCate({
-  title:"分类",
-  desc:"1111",
+  title: "分类",
+  desc: "1111",
 });
 ar.status = 0;
 var DB3 = new MySqlDB<ArticleCate>();

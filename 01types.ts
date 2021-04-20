@@ -31,7 +31,7 @@ console.log(str);
 //数组类型 (array)
 // var arr:number[] = [11,22,33];
 // console.log(arr);
-
+// 泛型数组
 // var arr:Array<number> = [11,22,33];
 // console.log(arr);
 
@@ -56,7 +56,7 @@ enum Color {  //如果标识符没有赋值  那么值就是下标
   red = 3,
   orange
 }
-let co:Color = Color.red;
+let co:Color = Color.blue;
 console.log(co);
 
 // 任意类型 any
@@ -73,6 +73,7 @@ console.log(n2);  //正确 */
 
 var n3:null;
 // n3 = 123 //报错
+// 联合类型
 var n4:null | number | undefined; //可以是这3种类型
 
 
@@ -89,7 +90,7 @@ function run2():void{  //表示方法没有任何类型的返回值
 // var b1 :null;
 // b = null
 
-var a : never;
+var a : never;  // 一般是错误的情况可以用never
 a = (()=>{
   throw new Error("错误");
 })()
